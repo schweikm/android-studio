@@ -10,4 +10,4 @@ if [[ ! -d ${PERSIST} ]]; then
     exit 1
 fi
 
-docker run -it -p 5901:5901 -v ${PERSIST}:${TARGET} android-studio:latest
+docker run -p 5901:5901 -v ${PERSIST}:${TARGET} android-studio:latest /dockerstartup/vnc_startup.sh --wait
